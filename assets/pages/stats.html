@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats | Amazing Events</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+
+<body>
+    <header class="header-1">
+        <nav class="m-nav navbar navbar-expand-lg">
+            <div class="d-nav container-fluid">
+                <a class=" logo navbar-brand col-6 m-0 d-flex justify-content-center col-lg-3 col-xl-2"
+                    href="../../index.html"><img src="../images/amazing_brand.png" class="col-11 col-md-8 col-xl-9"
+                        alt="amazing_logo" height="45"></a>
+                <button class="navbar-toggler btn-outline-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="nav-div collapse navbar-collapse w-lg-50 col-xl-6 fw-bold" id="navbarTogglerDemo03">
+                    <ul
+                        class="ul-nav navbar-nav me-auto mb-2 m-lg-0 w-lg-100 align-items-center col-lg-12 justify-content-lg-end">
+                        <li class="nav-item">
+                            <a class="nav-text nav-link" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-text nav-link" href="./upcominEvents.html">Upcoming
+                                Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-text nav-link" href="./pastEvents.html">Past Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-text nav-link" href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-text nav-link active link-danger" href="#">Stats</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex flex-column align-items-center" id="main">
+        <section class="carousel-m col-12">
+            <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-div carousel-inner position-relative">
+                    <h1 class="z-3 position-absolute top-50 start-50 translate-middle">Stats</h1>
+                    <div class="carousel-item active " data-bs-interval="7000">
+                        <img src="../images/optional_banner_4.jpg" class="d-block w-100 carousel-img" alt="banner-1">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="../images/optional_banner_5.jpg" class="d-block w-100 carousel-img" alt="banner-2">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="../images/optional_banner_3.jpg" class="d-block w-100 carousel-img" alt="banner-3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev justify-content-xl-evenly col-xl-2 bg-transparent" type="button"
+                    data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-transparent" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next justify-content-xl-evenly col-xl-2 bg-transparent" type="button"
+                    data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <div class="table-responsive p-1 p-md-3 col-md-11 col-xl-7 p-xl-4">
+            <div class="table">
+                <table class="main-table table table table-bordered border-primary m-0">
+                    <thead>
+                        <tr>
+                            <th colspan="3" class="text-bg-dark">
+                                Events Statistics
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr class="align-middle">
+                        <th class="align-middle">Events with highest % of asistance</th>
+                        <th class="align-middle">Events with lowest % of assitance</th>
+                        <th class="align-middle">Events with larger capacity</th>
+                    </tr>
+                    <tbody id="first-tabla">
+                        <tr class="text-center align-middle">
+                            <td class="text-danger bg-light-subtle fs-5 align-middle">{{mayorPercentageA}}</td>
+                            <td class="text-danger bg-light-subtle fs-5 align-middle">{{minumPercentageA}}</td>
+                            <td class="text-danger bg-light-subtle fs-5 align-middle">{{greaterCapacity}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table">
+                <table class="main-table table table table-bordered border-primary m-0">
+                    <thead>
+                        <th colspan="3">Upcoming events tatistics by category</th>
+                    </thead>
+                    <tr>
+                        <th class="text-bg-secondary align-middle">Categories</th>
+                        <th class="text-bg-secondary align-middle">Revenues</th>
+                        <th class="text-bg-secondary align-middle">Porcentage of assitance estimate</th>
+                    </tr>
+                    <tbody id="table-future">
+                        <template v-for="stats of futureStats">
+                            <tr class="text-center align-middle">
+                                <td class="text-danger bg-light-subtle fs-5 align-middle">{{stats.category}}</td>
+                                <td class="text-danger-emphasis bg-light-subtle align-middle">
+                                    ${{stats.revenue.toLocaleString()}}USD
+                                </td>
+                                <td class="text-danger-emphasis bg-light-subtle align-middle">
+                                    {{stats.percentageOfAssitance}}%</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table">
+                <table class="main-table table table table-bordered border-primary m-0">
+                    <thead>
+                        <th colspan="3">Past events statistics by category</th>
+                    </thead>
+                    <tr>
+                        <th class="text-bg-secondary align-middle">Categories</th>
+                        <th class="text-bg-secondary align-middle">Revenues</th>
+                        <th class="text-bg-secondary align-middle">Porcentage of assitance</th>
+                    </tr>
+                    <tbody id="table-past">
+                        <template v-for="stats of pastStats">
+                            <tr class="text-center align-middle">
+                                <td class="text-danger bg-light-subtle fs-5 align-middle">{{stats.category}}</td>
+                                <td class="text-danger-emphasis bg-light-subtle align-middle">
+                                    ${{stats.revenue.toLocaleString()}}USD
+                                </td>
+                                <td class="text-danger-emphasis bg-light-subtle align-middle">
+                                    {{stats.percentageOfAssitance}}%</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer d-flex pt-2 pt-md-0 justify-content-lg-between pb-0">
+        <div class="col-7 d-flex justify-content-evenly p-2 col-lg-3 col-xl-2  bg-transparent">
+            <a href=""><img src="../images/facebook.png" class="social col-4 rounded-4 " alt="facebook"></a>
+            <a href=""><img src="../images/whatsapp.png" class="social col-4 rounded-4" alt="whatsapp"></a>
+            <a href=""><img src="../images/instagram.png" class="social col-4 rounded-4" alt="instagram"></a>
+        </div>
+        <h6 class="col-5 fs-5 d-flex align-items-center justify-content-center col-lg-4">Cohort-49</h6>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../scripts/stats.js"></script>
+</body>
+
+</html>

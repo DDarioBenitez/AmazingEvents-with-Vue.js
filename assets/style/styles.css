@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #f5f1e8;
+}
+h1 {
+  font-size: 4rem;
+  color: #962c4c;
+  background-color: transparent;
+}
+
+.header-1 {
+  background-color: #f3c6b9;
+}
+.all-main {
+  min-height: 86vh;
+}
+/* header-details */
+.header-det {
+  background-color: #f3c6b9;
+  height: auto;
+}
+.details-main {
+  min-height: 88vh;
+}
+
+/* body contac */
+.body-contact {
+  height: 100vh !important;
+}
+.footer {
+  background-color: #f3c6b9;
+  min-height: 5.3vh;
+}
+.social {
+  width: 68%;
+}
+
+.main-table td {
+  background-color: #f5f1e8;
+}
+
+.h-md-50 {
+  height: 50% !important;
+}
+.h-md-100 {
+  height: 100% !important;
+}
+
+/* responsive */
+@media only screen and (min-width: 320px) {
+  /*Details */
+  .details-main {
+    min-height: 81.5vh;
+  }
+}
+
+@media only screen and (min-width: 430px) {
+  .carousel {
+    height: 100% !important;
+  }
+  .carousel-div {
+    height: 100% !important;
+  }
+  .carousel-item {
+    height: 100% !important;
+  }
+  .carousel-img {
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  }
+  .carousel-m {
+    height: 35vh;
+  }
+  .details-main {
+    min-height: 81.5vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .all-main {
+    min-height: 84vh;
+  }
+  .carousel {
+    height: 100% !important;
+  }
+  .carousel-div {
+    height: 100% !important;
+  }
+  .carousel-item {
+    height: 100% !important;
+  }
+  .carousel-img {
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  }
+  .carousel-m {
+    height: 35vh;
+  }
+  .m-nav {
+    font-size: 1.5rem !important;
+  }
+  .body-contact {
+    height: 100vh;
+  }
+  .footer div > a > img {
+    width: 68% !important;
+  }
+  .details-main {
+    min-height: 79vh;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .nav-text {
+    font-size: 1.2rem !important;
+  }
+  .carousel {
+    height: 100% !important;
+  }
+  .carousel-div {
+    height: 100% !important;
+  }
+  .carousel-item {
+    height: 100% !important;
+  }
+  .carousel-img {
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  }
+  .carousel-m {
+    height: 35vh;
+  }
+  .main-card img {
+    height: 30vh;
+    object-fit: cover;
+  }
+  .main-card div > p {
+    font-size: 1.2rem !important;
+  }
+  .main-check {
+    font-size: 1rem !important;
+  }
+  .search {
+    min-height: 5vh;
+  }
+  .search input {
+    font-size: 1.1rem;
+  }
+  .search button {
+    font-size: 1rem;
+  }
+  .details-main {
+    min-height: 82vh;
+  }
+  .footer {
+    padding-top: 0 !important ;
+  }
+  .body-contact {
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .m-nav {
+    height: 6.5vh !important;
+  }
+  .m-nav div > a {
+    height: auto !important;
+  }
+  .nav-text {
+    font-size: 1.2rem !important;
+  }
+  .d-nav {
+    height: 5vh;
+  }
+  .carousel {
+    height: 100% !important;
+  }
+  .carousel-div {
+    height: 100% !important;
+  }
+  .carousel-item {
+    height: 100% !important;
+  }
+  .carousel-img {
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  }
+  .carousel-m {
+    height: 35vh;
+  }
+  .all-main {
+    min-height: 88.2vh;
+  }
+  .main-check {
+    font-size: 1rem !important;
+  }
+  .search {
+    height: auto;
+  }
+  .search input,
+  button {
+    font-size: 1rem !important;
+  }
+  .cards-main {
+    min-height: 100vh !important;
+  }
+  .main-card {
+    display: flex;
+    width: 20% !important;
+    min-height: 48vh !important;
+  }
+  .main-card img {
+    width: 100% !important;
+    min-height: 30vh !important;
+    object-fit: cover;
+  }
+  .main-card div > p {
+    font-size: 1rem !important;
+  }
+  .footer div > a {
+    align-self: center;
+  }
+  .footer div > a > img {
+    width: 48% !important;
+  }
+  .footer {
+    padding: 0 !important;
+    height: 2vh !important;
+  }
+  .details-main {
+    min-height: 88vh;
+  }
+  .body-contact {
+    height: 100vh;
+  }
+}
